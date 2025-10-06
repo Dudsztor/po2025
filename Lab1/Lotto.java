@@ -5,27 +5,25 @@ public class Lotto {
     public static void main(String[] args) {
 
         Random rand = new Random();
-
         int[] tablica = new int[6];
-        int[] czy_byly = new int[6];
 
-        for (int i = 0; i < tablica.length; i++) {
+        int licznik = 0;
 
-            boolean check = true;
-                while(check){
-                    int test = rand.nextInt(10);
-                    if(!Arrays.asList(czy_byly[i]).contains(tablica[i])){
-                        Arrays.asList(czy_byly[i]).add(test);
-                      check = false;
-                    }
+        while(licznik < 6){
+            int potencjalne = rand.nextInt(49) + 1;
+            boolean exist = false;
 
-
+            for(int i=0; i<licznik; i++){
+                if (tablica[i] == potencjalne){
+                    exist = true;
+                    break;
                 }
-
             }
-
-        System.out.println("Czy byly: " + Arrays.toString(czy_byly));
+            if (!exist){
+                tablica[licznik] = potencjalne;
+                System.out.print(tablica[licznik] + " ");
+                licznik++;
+            }
         }
-
-
     }
+}
