@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Lotto {
@@ -8,44 +9,39 @@ public class Lotto {
         for(int i=0;i<6;i++) {
             liczby[i] = Integer.parseInt(args[i]);
         }
+        System.out.print("\nTwoje liczby: ");
+        for(int i=0;i<6;i++) {
+            System.out.print(liczby[i]+" ");
+        }
 
         //losowanie 6 liczb
         Random rand = new Random();
-        int[] tablica = new int[6];
 
-        int licznik = 0;
+        ArrayList<Integer> tablica = new ArrayList<Integer>(6);
 
-        while(licznik < 6){
-            int potencjalne = rand.nextInt(49) + 1;
-            boolean exist = false;
-
-            for(int i=0; i<licznik; i++){
-                if (tablica[i] == potencjalne){
-                    exist = true;
-                    break;
-                }
+        for(int i=0;i<6;i++) {
+            int losowa = rand.nextInt(49) + 1;
+            if (tablica.contains(losowa)) {
+                i--;
+                continue;
             }
-            if (!exist){
-                tablica[licznik] = potencjalne;
-                System.out.print(tablica[licznik] + " ");
-                licznik++;
-            }
-            for(int i=0; i<licznik; i++){
-
-            }
+            tablica.add(losowa);
         }
 
         //sprawdzanie trafień
+
         int trafione = 0;
 
-        for(int i=0; i<6; i++){
-            for (int j=0; j<licznik; j++){
-                if(liczby[i] == tablica[j]){
-                        trafione++;
-                }
+        for(int i=0;i<6;i++){
+            if(tablica.contains(liczby[i])){
+                trafione++;
             }
         }
+        System.out.print("\nWylosowane liczby: ");
+        for(int i=0;i<6;i++) {
+            System.out.print(tablica.get(i)+" ");
+        }
 
-        System.out.print("\nIlosc trafien: " + trafione);
+        System.out.print("\nIlość trafień: " + trafione);
     }
 }
