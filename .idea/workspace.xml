@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab3/src/CodingBat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Parrot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4_2/src/zadania/Zoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/Lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/Lab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Lab1.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,6 +36,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="340lULHafn9BBeJy4hvs1RsPaf9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,7 +49,9 @@
     "Application.Hello.executor": "Run",
     "Application.Lotto.executor": "Run",
     "Application.Unnamed.executor": "Run",
+    "Application.Zoo.executor": "Run",
     "Application.main.executor": "Run",
+    "Application.zadania.Zoo.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
@@ -50,17 +59,21 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/po2025/Lab2",
     "onboarding.tips.debug.path": "C:/Users/Admin/Documents/GitHub/po2025/Lab2/src/Main.java",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -80,12 +93,37 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.zadania.Zoo">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-25" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="Lab3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Zoo" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Zoo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zadania.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zadania.Zoo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="zadania.Zoo" />
+      <module name="Lab4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zadania.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +139,11 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.zadania.Zoo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
