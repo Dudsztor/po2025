@@ -8,6 +8,6 @@ public class Parrot extends Animal {
     }
 
     public String getDescription() {
-        return "Jestem " + this.name + " i mam " + this.legs + " nóg.";
+        return "Jestem " + this.name + " i mam " + this.legs + " nogi";
     }
 }

@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Parrot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4_2/src/animals/Snake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4_2/src/zadania/Zoo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Lab1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/Lab4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4_2/src/zadania/Zoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4_2/src/zadania/Zoo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +66,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/po2025/Lab2",
     "onboarding.tips.debug.path": "C:/Users/Admin/Documents/GitHub/po2025/Lab2/src/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "to.speed.mode.migration.done": "true"

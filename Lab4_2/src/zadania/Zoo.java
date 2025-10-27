@@ -21,12 +21,18 @@ public class Zoo {
             switch (var2) {
                 case 0:
                     this.animals[var1] = new Parrot("Marta_" + var1);
+                    String opis = animals[var1].getDescription();
+                    System.out.println(opis);
                     break;
                 case 1:
                     this.animals[var1] = new Dog("Seba_" + var1);
+                    opis = animals[var1].getDescription();
+                    System.out.println(opis);
                     break;
                 case 2:
                     this.animals[var1] = new Snake("Franek_" + var1);
+                    opis = animals[var1].getDescription();
+                    System.out.println(opis);
             }
         }
 
