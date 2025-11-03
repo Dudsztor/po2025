@@ -7,21 +7,27 @@ public class main {
 
         SkrzyniaBiegow skrzynia;
         Silnik silnik;
-        Sprzeglo sprzeglox;
+        Sprzeglo sprzeglo;
 
         skrzynia = new SkrzyniaBiegow("Toyota", "T-55");
         silnik = new Silnik("Audi", "CDS");
-        sprzeglox = new Sprzeglo("Fiat", "SSB");
+        sprzeglo = new Sprzeglo("Fiat", "SSB");
 
-        Samochod auto = new Samochod(skrzynia, silnik);
+        Samochod auto = new Samochod(skrzynia, silnik, sprzeglo);
         auto.wlacz();
 
-        sprzeglox.zwolnij();
-        sprzeglox.wcisnij();
+        sprzeglo.zwolnij();
+        sprzeglo.wcisnij();
+
+        auto.zwiekszBieg();
+
+        sprzeglo.zwolnij();
 
         auto.zwiekszBieg();
         auto.zwiekszBieg();
-        auto.zwiekszBieg();
+
+        sprzeglo.wcisnij();
+
         auto.zwiekszBieg();
         auto.zwiekszBieg();
         auto.zwiekszBieg();
