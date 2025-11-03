@@ -9,15 +9,11 @@ public class SkrzyniaBiegow extends Komponent {
     int aktualnyBieg = 0;
     int iloscBiegow = 6;
 
-    void zwiekszBieg(){
-        if (aktualnyBieg < iloscBiegow){
-            aktualnyBieg++;
-        }
+    public void zwiekszBieg(){
+        aktualnyBieg++;
     }
 
-    void zmniejszBieg(){
-        if (aktualnyBieg>1) {
-            aktualnyBieg--;
-        }
+    public void zmniejszBieg(){
+        aktualnyBieg--;
     }
 }

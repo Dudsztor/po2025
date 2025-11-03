@@ -1,14 +1,37 @@
 package symulator;
 
 public class Samochod {
-    Silnik  silnik;
+    Silnik silnik;
     SkrzyniaBiegow skrzynia;
+    Sprzeglo sprzeglo;
 
-    void wlacz(){
-        silnik.uruchom();
+    public Samochod(SkrzyniaBiegow skrzynia, Silnik silnik) {
+        this.skrzynia = skrzynia;
+        this.silnik = silnik;
     }
-    void wylacz(){
+
+    public void zwiekszBieg(){
+        if ((skrzynia.aktualnyBieg+1 <= skrzynia.iloscBiegow) && sprzeglo.stanSprzegla){
+            skrzynia.zwiekszBieg();
+        }
+    }
+
+    public void zmniejszBieg(){
+        if ((skrzynia.aktualnyBieg > 1) && sprzeglo.stanSprzegla){
+            skrzynia.zmniejszBieg();
+        }
+    }
+
+    public void wlacz(){
+        silnik.uruchom();
+        skrzynia.aktualnyBieg = 1;
+    }
+    public void wylacz(){
         silnik.zatrzymaj();
         skrzynia.aktualnyBieg = 0;
+    }
+
+    public void test(){
+        System.out.println("test");
     }
 }

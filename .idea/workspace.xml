@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Komponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Pozycja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Samochod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Silnik.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/SkrzyniaBiegow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Sprzeglo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator_0/symulator_0.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator_0/src/symulator/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4_2/src/zadania/Zoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4_2/src/zadania/Zoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Samochod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Silnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Silnik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/SkrzyniaBiegow.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator_0/src/symulator/SkrzyniaBiegow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Sprzeglo.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator_0/src/symulator/Sprzeglo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +48,7 @@
     "Application.Lotto.executor": "Run",
     "Application.Unnamed.executor": "Run",
     "Application.Zoo.executor": "Run",
-    "Application.main.executor": "Run",
+    "Application.main.executor": "Debug",
     "Application.zadania.Zoo.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -101,7 +92,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.zadania.Zoo">
+  <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-25" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -180,5 +171,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/symulator_0/src/symulator/main.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/symulator_0/src/symulator/main.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

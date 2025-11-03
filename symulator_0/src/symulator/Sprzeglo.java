@@ -6,12 +6,12 @@ public class Sprzeglo extends Komponent{
         super(producent, model);
     }
 
-    boolean stanSprzegla;
+    public boolean stanSprzegla;
 
-    void wcisnij(){
+    public void wcisnij(){
         stanSprzegla = true;
     }
-    void zwolnij(){
+    public void zwolnij(){
         stanSprzegla = false;
     }
 }

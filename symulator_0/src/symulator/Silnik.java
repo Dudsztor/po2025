@@ -9,11 +9,11 @@ public class Silnik extends Komponent{
     int maxObroty = 90000;
     int obroty;
 
-    void uruchom(){
+    public void uruchom(){
         obroty = 900;
     }
 
-    void zatrzymaj(){
+    public void zatrzymaj(){
         obroty = 0;
     }
 }
