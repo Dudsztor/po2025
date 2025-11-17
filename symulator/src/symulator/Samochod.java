@@ -5,8 +5,6 @@ public class Samochod {
     SkrzyniaBiegow skrzynia;
     Sprzeglo sprzeglo;
 
-
-
     public Samochod(SkrzyniaBiegow skrzynia, Silnik silnik, Sprzeglo sprzeglo) {
         this.skrzynia = skrzynia;
         this.silnik = silnik;
