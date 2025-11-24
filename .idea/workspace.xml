@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab4_2/Lab4_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4_2/Lab4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Komponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Komponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Pozycja.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Pozycja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Silnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/SkrzyniaBiegow.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/Sprzeglo.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Sprzeglo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/src/symulator/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator_0/symulator_0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/symulator.iml" afterDir="false" />
-    </list>
+    <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="gui samochod" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,8 +184,17 @@
       <workItem from="1763395267947" duration="1617000" />
       <workItem from="1763396893569" duration="1532000" />
       <workItem from="1763398430802" duration="419000" />
-      <workItem from="1763398852242" duration="336000" />
+      <workItem from="1763398852242" duration="662000" />
     </task>
+    <task id="LOCAL-00001" summary="gui samochod">
+      <option name="closed" value="true" />
+      <created>1763399209605</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763399209605</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,5 +210,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gui samochod" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui samochod" />
   </component>
 </project>
