@@ -13,24 +13,6 @@ public class main {
         silnik = new Silnik("Audi", "CDS");
         sprzeglo = new Sprzeglo("Fiat", "SSB");
 
-        Samochod auto = new Samochod(skrzynia, silnik, sprzeglo);
-        auto.wlacz();
 
-        sprzeglo.zwolnij();
-        sprzeglo.wcisnij();
-
-        auto.zwiekszBieg();
-
-        sprzeglo.zwolnij();
-
-        auto.zwiekszBieg();
-        auto.zwiekszBieg();
-
-        sprzeglo.wcisnij();
-
-        auto.zwiekszBieg();
-        auto.zwiekszBieg();
-        auto.zwiekszBieg();
-        auto.zwiekszBieg();
     }
 }

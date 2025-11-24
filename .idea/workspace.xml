@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="gui samochod" />
+    <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="gui samochod">
+      <change afterPath="$PROJECT_DIR$/symulator/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +28,7 @@
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -185,6 +198,7 @@
       <workItem from="1763396893569" duration="1532000" />
       <workItem from="1763398430802" duration="419000" />
       <workItem from="1763398852242" duration="662000" />
+      <workItem from="1763999446321" duration="4801000" />
     </task>
     <task id="LOCAL-00001" summary="gui samochod">
       <option name="closed" value="true" />

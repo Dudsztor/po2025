@@ -26,9 +26,9 @@
                 <HBox alignment="CENTER_RIGHT" spacing="10.0" style="-fx-background-color: #dddddd; -fx-border-color: #bbbbbb;">
                     <children>
                         <Label text="Samochód:" />
-                        <ComboBox prefWidth="150.0" promptText="Wybierz..." />
-                        <Button mnemonicParsing="false" text="Dodaj nowy" />
-                        <Button mnemonicParsing="false" text="Usuń" />
+                        <ComboBox prefWidth="150.0" promptText="Wybierz..." fx:id="wyborAutaBox" onAction="#wybierzAutoF"/>
+                        <Button mnemonicParsing="false" fx:id="dodajAutoBtn" text="Dodaj nowy" onAction="#dodajAutoF"/>
+                        <Button mnemonicParsing="false" fx:id="usunAutoBtn" text="Usuń" onAction="#usunAutoF"/>
                     </children>
                     <padding>
                         <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
@@ -69,8 +69,8 @@
                                 </GridPane>
                                 <HBox spacing="5.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Włącz" />
-                                        <Button mnemonicParsing="false" text="Wyłącz" />
+                                        <Button mnemonicParsing="false" fx:id="wlaczBtn" text="Włącz" onAction="#wlaczAutoF" />
+                                        <Button mnemonicParsing="false" fx:id="wylaczBtn" text="Wyłącz" onAction="#wylaczAutoF"/>
                                         <Button mnemonicParsing="false" text="Button" />
                                     </children>
                                 </HBox>
@@ -107,8 +107,8 @@
                                 </GridPane>
                                 <HBox spacing="5.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Zwiększ bieg" />
-                                        <Button mnemonicParsing="false" text="Zmniejsz bieg" />
+                                        <Button mnemonicParsing="false" fx:id="zwiekszBiegBtn" text="Zwiększ bieg"  onAction="#zwiekszBiegF"/>
+                                        <Button mnemonicParsing="false" fx:id="zmniejszBiegBtn" text="Zmniejsz bieg"  onAction="#zmniejszBiegF"/>
                                     </children>
                                 </HBox>
                             </children>
