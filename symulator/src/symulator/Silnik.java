@@ -6,7 +6,7 @@ public class Silnik extends Komponent{
         super(producent, model);
     }
 
-    int maxObroty = 90000;
+    int maxObroty;
     int obroty;
 
     public void uruchom(){

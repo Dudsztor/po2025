@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.samochodgui.DodajSamochodController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="Dodawanie pojazdu" GridPane.columnSpan="2">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Label text="Nr rejestracyjny:" GridPane.rowIndex="1" />
+        <TextField fx:id="nazwaField" promptText="np. KRA 12345" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Max prędkość:" GridPane.rowIndex="2" />
+        <TextField fx:id="predkoscField" promptText="np. 220" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Ilość biegów:" GridPane.rowIndex="3" />
+        <TextField fx:id="biegiField" promptText="np. 6" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</GridPane>

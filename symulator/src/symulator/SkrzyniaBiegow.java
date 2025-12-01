@@ -2,18 +2,19 @@ package symulator;
 
 public class SkrzyniaBiegow extends Komponent {
 
-    public SkrzyniaBiegow(String producent, String model) {
+    public int aktualnyBieg = 0;
+    public int iloscBiegow;
+
+    public SkrzyniaBiegow(String producent, String model, int iloscBiegow) {
         super(producent, model);
+        this.iloscBiegow = iloscBiegow;
     }
 
-    int aktualnyBieg = 0;
-    int iloscBiegow = 6;
-
-    public void zwiekszBieg(){
+    public void zwiekszBieg() {
         aktualnyBieg++;
     }
 
-    public void zmniejszBieg(){
+    public void zmniejszBieg() {
         aktualnyBieg--;
     }
 }

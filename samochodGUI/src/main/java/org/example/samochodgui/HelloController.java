@@ -3,78 +3,150 @@ package org.example.samochodgui;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import symulator.Samochod;
-import java.util.Random;
+
+import java.util.Optional;
 
 public class HelloController {
     private Samochod aktywneAuto;
-
     private ObservableList<Samochod> flota = FXCollections.observableArrayList();
 
-    @FXML
-    private ComboBox<Samochod> wyborAutaBox;
+    @FXML private ComboBox<Samochod> wyborAutaBox;
+    @FXML private TextField nrRejestracyjnyField;
+    @FXML private TextField predkoscField;
+    @FXML private TextField biegField;
+
+    @FXML private Button wlaczBtn;
+    @FXML private Button wylaczBtn;
+    @FXML private Button zwiekszBiegBtn;
+    @FXML private Button zmniejszBiegBtn;
+    @FXML private Button dodajAutoBtn;
+    @FXML private Button usunAutoBtn;
+
+    @FXML private ImageView carImageView;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         wyborAutaBox.setItems(flota);
-        dodajAutoF();
+
+        try {
+            var imageStream = getClass().getResourceAsStream("/images/car.jpg");
+
+            if (imageStream == null) {
+                System.out.println("BŁĄD: Nie znaleziono pliku! Upewnij się, że plik jest w: src/main/resources/images/car.jpg");
+            } else {
+                Image carImage = new Image(imageStream);
+                carImageView.setImage(carImage);
+                carImageView.setFitWidth(100);
+                carImageView.setPreserveRatio(true);
+                System.out.println("Sukces: Załadowano obrazek.");
+            }
+        } catch (Exception e) {
+            System.out.println("Wystąpił wyjątek: " + e.getMessage());
+        }
     }
 
     @FXML
-    public void dodajAutoF(){
-        String losowyNr = "KPR " + new Random().nextInt(1000,9999);
-        Samochod nowe = new Samochod(losowyNr);
-        flota.add(nowe);
+    public void dodajAutoF() {
+        try {
 
-        wyborAutaBox.getSelectionModel().select(nowe);
-        aktywneAuto = nowe;
-        System.out.println("Dodano nowe auto: " + losowyNr);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("dodaj-view.fxml"));
+            GridPane dialogContent = loader.load();
+
+            DodajSamochodController dialogController = loader.getController();
+
+            Dialog<Samochod> dialog = new Dialog<>();
+            dialog.setTitle("Nowy Samochód");
+            dialog.setHeaderText("Wprowadź dane pojazdu");
+            dialog.getDialogPane().setContent(dialogContent);
+
+            ButtonType dodajBtnType = new ButtonType("Dodaj", ButtonBar.ButtonData.OK_DONE);
+            dialog.getDialogPane().getButtonTypes().addAll(dodajBtnType, ButtonType.CANCEL);
+
+            dialog.setResultConverter(dialogButton -> {
+                if (dialogButton == dodajBtnType) {
+                    return dialogController.getNoweAuto();
+                }
+                return null;
+            });
+
+            Optional<Samochod> result = dialog.showAndWait();
+            result.ifPresent(noweAuto -> {
+                flota.add(noweAuto);
+                wyborAutaBox.getSelectionModel().select(noweAuto);
+                wybierzAutoF();
+                System.out.println("Dodano auto: " + noweAuto);
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
     @FXML
     protected void wybierzAutoF() {
         aktywneAuto = wyborAutaBox.getSelectionModel().getSelectedItem();
-        if (aktywneAuto != null) {
-            System.out.println("Wybrano: " + aktywneAuto);
-        }
+        refresh();
     }
+
     @FXML
     protected void usunAutoF(){
         Samochod doUsuniecia = wyborAutaBox.getSelectionModel().getSelectedItem();
         if (doUsuniecia != null) {
             flota.remove(doUsuniecia);
             aktywneAuto = null;
+            refresh();
             System.out.println("Usunięto auto");
         }
     }
 
-    public Button dodajAutoBtn;
-    public Button usunAutoBtn;
-    @FXML
-    public Button wlaczBtn;
-    public Button wylaczBtn;
+    private void refresh() {
+        if (aktywneAuto != null) {
+            if(nrRejestracyjnyField != null) nrRejestracyjnyField.setText(aktywneAuto.getNrRejestracyjny());
+            if(predkoscField != null) predkoscField.setText(String.valueOf(aktywneAuto.getMaxPredkosc()) + " km/h");
 
-    public Button zwiekszBiegBtn;
-    public Button zmniejszBiegBtn;
+            if(biegField != null) {
+                String infoBieg = aktywneAuto.skrzynia.aktualnyBieg + " / " + aktywneAuto.skrzynia.iloscBiegow;
+                biegField.setText(infoBieg);
+            }
+        } else {
+            if(nrRejestracyjnyField != null) nrRejestracyjnyField.setText("");
+            if(predkoscField != null) predkoscField.setText("");
+            if(biegField != null) biegField.setText("");
+        }
+    }
 
     @FXML
     private void wlaczAutoF(){
-        aktywneAuto.wlacz();
+        if(aktywneAuto != null) {
+            aktywneAuto.wlacz();
+            refresh();
+        }
     }
     @FXML
     private void wylaczAutoF(){
-        aktywneAuto.wylacz();
+        if(aktywneAuto != null) {
+            aktywneAuto.wylacz();
+            refresh();
+        }
     }
     @FXML
     private void zwiekszBiegF(){
-        aktywneAuto.zwiekszBieg();
+        if(aktywneAuto != null) {
+            aktywneAuto.zwiekszBieg();
+            refresh();
+        }
     }
     @FXML
     private void zmniejszBiegF(){
-        aktywneAuto.zmniejszBieg();
+        if(aktywneAuto != null) {
+            aktywneAuto.zmniejszBieg();
+            refresh();
+        }
     }
-
-
 }
