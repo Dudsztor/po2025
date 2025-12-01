@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="gui samochod">
-      <change afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/DodajSamochodController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/images/car.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/dodaj-view.fxml" afterDir="false" />
+    <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="car icon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Samochod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Samochod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Silnik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Silnik.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/SkrzyniaBiegow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/SkrzyniaBiegow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,49 +42,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CodingBat.executor": "Run",
-    "Application.Hello.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Lotto.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Application.Zoo.executor": "Run",
-    "Application.main.executor": "Debug",
-    "Application.start gui.executor": "Run",
-    "Application.zadania.Zoo.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/po2025/samochodGUI/src/main/resources/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Admin/Documents/GitHub/po2025/Lab2/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CodingBat.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Hello.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Lotto.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Zoo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.start gui.executor&quot;: &quot;Run&quot;,
+    &quot;Application.zadania.Zoo.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/po2025/samochodGUI/src/main/resources/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Admin/Documents/GitHub/po2025/Lab2/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Documents\GitHub\po2025\samochodGUI\src\main\resources\images" />
@@ -211,7 +194,9 @@
       <workItem from="1763999446321" duration="4974000" />
       <workItem from="1764363929462" duration="73000" />
       <workItem from="1764604310529" duration="3944000" />
-      <workItem from="1764608317267" duration="746000" />
+      <workItem from="1764608317267" duration="952000" />
+      <workItem from="1764625285991" duration="71000" />
+      <workItem from="1764629785770" duration="589000" />
     </task>
     <task id="LOCAL-00001" summary="gui samochod">
       <option name="closed" value="true" />
@@ -221,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763399209605</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="car icon">
+      <option name="closed" value="true" />
+      <created>1764609255810</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764609255810</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +233,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gui samochod" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui samochod" />
+    <MESSAGE value="car icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="car icon" />
   </component>
 </project>
