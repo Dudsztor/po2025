@@ -1,21 +1,23 @@
 package symulator;
 
 public abstract class Komponent {
+    private String nazwa;
+    private double waga;
+    private double cena;
 
-    String producent;
-    String model;
-
-    public Komponent(String producent, String model) {
-        this.producent = producent;
-        this.model = model;
+    public Komponent(String nazwa, double waga, double cena) {
+        this.nazwa = nazwa;
+        this.waga = waga;
+        this.cena = cena;
     }
 
-    public String getProducent() {
-        return producent;
+    public String getNazwa() {
+        return nazwa;
     }
-
-    public String getModel() {
-        return model;
+    public double getWaga() {
+        return waga;
     }
-
+    public double getCena() {
+        return cena;
+    }
 }

@@ -3,9 +3,8 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
+
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.samochodgui.HelloController">
 
     <top>
@@ -28,7 +27,7 @@
                 <HBox alignment="CENTER_RIGHT" spacing="10.0" style="-fx-background-color: #dddddd; -fx-border-color: #bbbbbb;">
                     <children>
                         <Label text="Samochód:" />
-                        <ComboBox fx:id="wyborAutaBox" onAction="#wybierzAutoF" prefWidth="150.0" promptText="Wybierz..." />
+                        <ComboBox fx:id="wyborAutaBox" prefWidth="150.0" promptText="Wybierz..." />
 
                         <Button fx:id="dodajAutoBtn" mnemonicParsing="false" onAction="#dodajAutoF" text="Dodaj nowy" />
                         <Button fx:id="usunAutoBtn" mnemonicParsing="false" onAction="#usunAutoF" text="Usuń" />
@@ -59,19 +58,23 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
                                         <Label text="Model" />
-                                        <TextField GridPane.columnIndex="1" />
+                                        <TextField fx:id="modelTextField" editable="false" GridPane.columnIndex="1" />
 
                                         <Label text="Nr rejestracyjny" GridPane.rowIndex="1" />
                                         <TextField fx:id="nrRejestracyjnyField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                                         <Label text="Waga" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TextField fx:id="wagaTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                                         <Label text="Prędkość Max" GridPane.rowIndex="3" />
                                         <TextField fx:id="predkoscField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                        <Label text="Aktualna Prędkość" GridPane.rowIndex="4" />
+                                        <TextField fx:id="currentSpeedField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                     </children>
                                 </GridPane>
                                 <HBox spacing="5.0">
@@ -97,25 +100,22 @@
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
                                         <Label text="Nazwa" />
-                                        <TextField GridPane.columnIndex="1" />
-                                        <Label text="Cena" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <Label text="Waga" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TextField fx:id="gearboxNameField" editable="false" text="Manual" GridPane.columnIndex="1" />
 
-                                        <Label text="Bieg" GridPane.rowIndex="3" />
-                                        <TextField fx:id="biegField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <Label text="Bieg" GridPane.rowIndex="1" />
+                                        <TextField fx:id="biegField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                        <Label text="Cena" GridPane.rowIndex="2" />
+                                        <TextField fx:id="skrzyniaCenaField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                     </children>
                                 </GridPane>
                                 <HBox spacing="5.0">
                                     <children>
-                                        <Button fx:id="zwiekszBiegBtn" mnemonicParsing="false" onAction="#zwiekszBiegF" text="Zwiększ bieg" />
-                                        <Button fx:id="zmniejszBiegBtn" mnemonicParsing="false" onAction="#zmniejszBiegF" text="Zmniejsz bieg" />
+                                        <Button fx:id="zwiekszBiegBtn" mnemonicParsing="false" onAction="#zwiekszBiegF" text="Bieg +" />
+                                        <Button fx:id="zmniejszBiegBtn" mnemonicParsing="false" onAction="#zmniejszBiegF" text="Bieg -" />
                                     </children>
                                 </HBox>
                             </children>
@@ -135,24 +135,21 @@
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
                                         <Label text="Nazwa" />
-                                        <TextField GridPane.columnIndex="1" />
-                                        <Label text="Cena" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <Label text="Waga" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <Label text="Obroty" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField fx:id="engineNameField" editable="false" text="V8" GridPane.columnIndex="1" />
+
+                                        <Label text="Obroty" GridPane.rowIndex="1" />
+                                        <TextField fx:id="obrotyField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <Label text="Cena" GridPane.rowIndex="2" />
+                                        <TextField fx:id="silnikCenaField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                     </children>
                                 </GridPane>
                                 <HBox spacing="5.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Dodaj gazu" />
-                                        <Button mnemonicParsing="false" text="Ujmij gazu" />
+                                        <Button mnemonicParsing="false" onAction="#dodajGazu" text="Gaz +" />
+                                        <Button mnemonicParsing="false" onAction="#ujmijGazu" text="Gaz -" />
                                     </children>
                                 </HBox>
                             </children>
@@ -171,25 +168,18 @@
                                     </columnConstraints>
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
-                                        <Label text="Nazwa" />
-                                        <TextField GridPane.columnIndex="1" />
+                                        <Label text="Stan" />
+                                        <TextField fx:id="clutchStateField" editable="false" GridPane.columnIndex="1" />
                                         <Label text="Cena" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <Label text="Waga" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <Label text="Stan" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField fx:id="sprzegloCenaField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     </children>
                                 </GridPane>
                                 <HBox spacing="5.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Naciśnij" />
-                                        <Button mnemonicParsing="false" text="Zwolnij" />
+                                        <Button mnemonicParsing="false" onAction="#nacisnijSprzeglo" text="Naciśnij" />
+                                        <Button mnemonicParsing="false" onAction="#zwolnijSprzeglo" text="Zwolnij" />
                                     </children>
                                 </HBox>
                             </children>
@@ -202,18 +192,12 @@
     </left>
 
     <center>
-        <AnchorPane style="-fx-background-color: lightgreen;" BorderPane.alignment="CENTER">
+        <AnchorPane fx:id="mapPane" style="-fx-background-color: lightgreen;" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="14.0" layoutY="14.0" text="Mapa" />
 
-                <VBox alignment="CENTER" layoutX="14.0" layoutY="40.0">
-                    <Label style="-fx-font-weight: bold; -fx-text-fill: red;" text="[AUTO]" />
-
-                    <ImageView fx:id="carImageView" fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-
-                    </ImageView>
-                    <Label text="Car" />
-                </VBox>
+                <ImageView fx:id="carImageView" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" x="0" y="0">
+                </ImageView>
             </children>
         </AnchorPane>
     </center>

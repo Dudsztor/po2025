@@ -1,65 +1,136 @@
 package symulator;
 
-public class Samochod {
-    private String nrRejestracyjny;
-    private int maxPredkosc; // Nowe pole do przechowywania prędkości
+import java.util.ArrayList;
+import java.util.List;
 
-    // Komponenty publiczne, aby łatwo dostać się do nich z Kontrolera
+public class Samochod extends Thread {
+    private String nrRejestracyjny;
+    private String model;
+    private int maxPredkosc;
+    private double wagaCalkowita;
+
     public Silnik silnik;
     public SkrzyniaBiegow skrzynia;
     public Sprzeglo sprzeglo;
 
-    // Zaktualizowany konstruktor przyjmujący dane z formularza
-    public Samochod(String nrRejestracyjny, int maxPredkosc, int iloscBiegow) {
+    private Pozycja pozycja;
+    private Pozycja cel;
+    private double aktualnaPredkosc = 0;
+    private List<Listener> listeners = new ArrayList<>();
+
+    public Samochod(String model, String nrRejestracyjny, double waga, int maxPredkosc,
+                    Silnik silnik, SkrzyniaBiegow skrzynia, Sprzeglo sprzeglo) {
+        this.model = model;
         this.nrRejestracyjny = nrRejestracyjny;
         this.maxPredkosc = maxPredkosc;
 
-        // Przekazujemy ilość biegów do nowej Skrzyni
-        this.skrzynia = new SkrzyniaBiegow("SkrzyniaCorp", "Manual", iloscBiegow);
-        this.silnik = new Silnik("V8 Motor", "5.0L");
-        this.sprzeglo = new Sprzeglo("SprzegloEx", "Sportowe");
-    }
+        this.wagaCalkowita = waga + silnik.getWaga() + sprzeglo.getWaga() + skrzynia.getWaga();
 
-    // Gettery potrzebne do wyświetlania danych w GUI
-    public String getNrRejestracyjny() {
-        return nrRejestracyjny;
-    }
+        this.silnik = silnik;
+        this.skrzynia = skrzynia;
+        this.sprzeglo = sprzeglo;
+        this.pozycja = new Pozycja(0, 0);
 
-    public int getMaxPredkosc() {
-        return maxPredkosc;
+        start();
     }
 
     @Override
-    public String toString() {
-        return nrRejestracyjny; // To wyświetla się na liście w ComboBox
+    public void run() {
+        double deltat = 0.1;
+        while (true) {
+            try {
+                Thread.sleep(100);
+                przeliczPredkosc();
+                if (cel != null && aktualnaPredkosc > 0) {
+                    double odleglosc = Math.sqrt(Math.pow(cel.x - pozycja.x, 2) + Math.pow(cel.y - pozycja.y, 2));
+                    if (odleglosc > 5.0) {
+                        double dx = aktualnaPredkosc * deltat * (cel.x - pozycja.x) / odleglosc;
+                        double dy = aktualnaPredkosc * deltat * (cel.y - pozycja.y) / odleglosc;
+                        pozycja.x += dx;
+                        pozycja.y += dy;
+                    } else {
+                        pozycja.x = cel.x;
+                        pozycja.y = cel.y;
+                        cel = null;
+                    }
+                }
+                notifyListeners();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
-    public void zwiekszBieg() {
-        // Sprawdzamy, czy nie przekraczamy maksymalnej liczby biegów danej skrzyni
-        if ((skrzynia.aktualnyBieg + 1 <= skrzynia.iloscBiegow) && sprzeglo.stanSprzegla) {
-            skrzynia.zwiekszBieg();
-            System.out.println("Zwiekszono bieg. Aktualny bieg: " + skrzynia.aktualnyBieg);
+    private void przeliczPredkosc() {
+        if (sprzeglo.isWcisniete() || skrzynia.getAktualnyBieg() == 0) {
+            aktualnaPredkosc = 0;
         } else {
-            System.out.println("Nie można zwiększyć biegu (sprzęgło? max bieg?)");
+            double obroty = silnik.getObroty();
+            int bieg = skrzynia.getAktualnyBieg();
+            double wyliczonaPredkosc = (obroty * bieg) / 150.0;
+            if (wyliczonaPredkosc > maxPredkosc) {
+                wyliczonaPredkosc = maxPredkosc;
+            }
+            this.aktualnaPredkosc = wyliczonaPredkosc;
         }
     }
 
-    public void zmniejszBieg() {
-        if ((skrzynia.aktualnyBieg > 1) && sprzeglo.stanSprzegla) {
-            skrzynia.zmniejszBieg();
-            System.out.println("Zmniejszono bieg. Aktualny bieg: " + skrzynia.aktualnyBieg);
-        }
+    public void addListener(Listener listener) {
+        listeners.add(listener);
+    }
+    public void removeListener(Listener listener) {
+        listeners.remove(listener);
+    }
+    private void notifyListeners() {
+        for (Listener listener : listeners)
+            listener.update();
     }
 
+    public void jedzDo(Pozycja p) {
+        this.cel = p;
+    }
+
+    public Pozycja getPozycja() {
+        return pozycja;
+    }
+    public double getAktualnaPredkosc() {
+        return Math.round(aktualnaPredkosc * 100.0) / 100.0;
+    }
+    public double getMaxPredkosc() {
+        return maxPredkosc;
+    }
     public void wlacz() {
         silnik.uruchom();
-        skrzynia.aktualnyBieg = 1; // Na start wrzucamy jedynkę (opcjonalne)
-        System.out.println("Wlaczono samochod");
     }
-
     public void wylacz() {
         silnik.zatrzymaj();
-        skrzynia.aktualnyBieg = 0;
-        System.out.println("Wylaczono samochod");
+    }
+    public void zwiekszBieg() throws Exception {
+        if(sprzeglo.isWcisniete()) {
+            skrzynia.zwiekszBieg();
+        }
+        else {
+            throw new Exception("Wciśnij sprzęgło!");
+        }
+    }
+    public void zmniejszBieg() throws Exception {
+        if(sprzeglo.isWcisniete()) {
+            skrzynia.zmniejszBieg();
+        } else {
+            throw new Exception("Wciśnij sprzęgło!");
+        }
+    }
+
+    public String getNrRejestracyjny() {
+        return nrRejestracyjny;
+    }
+    public String getModel() {
+        return model;
+    }
+    public double getWaga() {
+        return wagaCalkowita;
+    }
+    @Override public String toString() {
+        return model + " (" + nrRejestracyjny + ")";
     }
 }

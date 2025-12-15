@@ -1,15 +1,19 @@
 package symulator;
 
 public class Pozycja {
-    double x;
-    double y;
+    public double x;
+    public double y;
 
-    void aktualizujPozycje(double deltax, double deltay) {
-        this.x = this.x + deltax;
-        this.y = this.y + deltay;
+    public Pozycja(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
 
-    String getPozycja() {
-        return "Pozycja " + x + " " + y;
+    public double getX() { return x; }
+    public double getY() { return y; }
+
+    @Override
+    public String toString() {
+        return String.format("%.2f, %.2f", x, y);
     }
 }

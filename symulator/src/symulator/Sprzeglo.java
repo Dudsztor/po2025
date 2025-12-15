@@ -1,17 +1,27 @@
 package symulator;
 
-public class Sprzeglo extends Komponent{
 
-    public Sprzeglo(String producent, String model) {
-        super(producent, model);
+public class Sprzeglo extends Komponent {
+    private boolean stanSprzegla;
+
+    public Sprzeglo(String nazwa, double waga, double cena) {
+        super(nazwa, waga, cena);
+        this.stanSprzegla = false;
     }
 
-    public boolean stanSprzegla;
-
-    public void wcisnij(){
-        stanSprzegla = true;
+    public void wcisnij() {
+        if (!stanSprzegla) {
+            stanSprzegla = true;
+        }
     }
-    public void zwolnij(){
-        stanSprzegla = false;
+    public void zwolnij() {
+        if(stanSprzegla) {
+            stanSprzegla = false;
+        }
+
+    }
+
+    public boolean isWcisniete() {
+        return stanSprzegla;
     }
 }

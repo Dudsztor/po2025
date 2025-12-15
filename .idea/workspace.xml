@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="car icon">
+      <change afterPath="$PROJECT_DIR$/symulator/src/symulator/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Komponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Komponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Pozycja.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Pozycja.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Samochod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Samochod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Silnik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Silnik.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/SkrzyniaBiegow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/SkrzyniaBiegow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Sprzeglo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Sprzeglo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/DodajSamochodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/DodajSamochodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/images/car.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/images/car.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/dodaj-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/dodaj-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Komponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Komponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Pozycja.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Pozycja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Sprzeglo.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Sprzeglo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/symulator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/symulator.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +71,7 @@
     &quot;Application.CodingBat.executor&quot;: &quot;Run&quot;,
     &quot;Application.Hello.executor&quot;: &quot;Run&quot;,
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
     &quot;Application.Lotto.executor&quot;: &quot;Run&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;Application.Zoo.executor&quot;: &quot;Run&quot;,
@@ -91,8 +116,8 @@
       <recent name="C:\Users\Admin\Documents\GitHub\po2025\Lab2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Documents\GitHub\po2025\samochodGUI\src\main\java\org\example\samochodgui\images" />
       <recent name="C:\Users\Admin\Documents\GitHub\po2025\samochodGUI\src\main\resources\images" />
+      <recent name="C:\Users\Admin\Documents\GitHub\po2025\samochodGUI\src\main\java\org\example\samochodgui\images" />
       <recent name="C:\Users\Admin\Documents\GitHub\po2025\Lab3" />
       <recent name="C:\Users\Admin\Documents\GitHub\po2025\LLab2\src" />
       <recent name="C:\Users\Admin\Documents\GitHub\po2025\Lab2\src" />
@@ -196,7 +221,16 @@
       <workItem from="1764604310529" duration="3944000" />
       <workItem from="1764608317267" duration="952000" />
       <workItem from="1764625285991" duration="71000" />
-      <workItem from="1764629785770" duration="589000" />
+      <workItem from="1764629785770" duration="2752000" />
+      <workItem from="1764681623309" duration="701000" />
+      <workItem from="1765149971081" duration="508000" />
+      <workItem from="1765207860560" duration="4857000" />
+      <workItem from="1765233930572" duration="3965000" />
+      <workItem from="1765301648795" duration="738000" />
+      <workItem from="1765314178603" duration="190000" />
+      <workItem from="1765789811430" duration="9601000" />
+      <workItem from="1765806293914" duration="401000" />
+      <workItem from="1765813871232" duration="1623000" />
     </task>
     <task id="LOCAL-00001" summary="gui samochod">
       <option name="closed" value="true" />
@@ -214,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764609255810</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="car icon">
+      <option name="closed" value="true" />
+      <created>1764630517516</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764630517516</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,5 +277,12 @@
     <MESSAGE value="gui samochod" />
     <MESSAGE value="car icon" />
     <option name="LAST_COMMIT_MESSAGE" value="car icon" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
+    </breakpoint-manager>
   </component>
 </project>
