@@ -45,7 +45,7 @@ public class Samochod extends Thread {
                 przeliczPredkosc();
                 if (cel != null && aktualnaPredkosc > 0) {
                     double odleglosc = Math.sqrt(Math.pow(cel.x - pozycja.x, 2) + Math.pow(cel.y - pozycja.y, 2));
-                    if (odleglosc > 5.0) {
+                    if (odleglosc > deltat*100) {
                         double dx = aktualnaPredkosc * deltat * (cel.x - pozycja.x) / odleglosc;
                         double dy = aktualnaPredkosc * deltat * (cel.y - pozycja.y) / odleglosc;
                         pozycja.x += dx;
@@ -69,7 +69,7 @@ public class Samochod extends Thread {
         } else {
             double obroty = silnik.getObroty();
             int bieg = skrzynia.getAktualnyBieg();
-            double wyliczonaPredkosc = (obroty * bieg) / 150.0;
+            double wyliczonaPredkosc = (obroty * bieg) / 300.0;
             if (wyliczonaPredkosc > maxPredkosc) {
                 wyliczonaPredkosc = maxPredkosc;
             }
@@ -96,7 +96,7 @@ public class Samochod extends Thread {
         return pozycja;
     }
     public double getAktualnaPredkosc() {
-        return Math.round(aktualnaPredkosc * 100.0) / 100.0;
+        return Math.round(aktualnaPredkosc);
     }
     public double getMaxPredkosc() {
         return maxPredkosc;

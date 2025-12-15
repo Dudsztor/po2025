@@ -22,6 +22,10 @@ public class SkrzyniaBiegow extends Komponent {
         }
     }
 
-    public int getAktualnyBieg() { return aktualnyBieg; }
-    public int getIloscBiegow() { return iloscBiegow; }
+    public int getAktualnyBieg() {
+        return aktualnyBieg;
+    }
+    public int getIloscBiegow() {
+        return iloscBiegow;
+    }
 }

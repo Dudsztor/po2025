@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b8ba7d-a422-47a3-a4ed-bd6d4315a135" name="Changes" comment="car movement">
-      <change afterPath="$PROJECT_DIR$/symulator/src/symulator/pokazBlad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/symulator/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Pozycja.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Pozycja.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Samochod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Samochod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/Silnik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/Silnik.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/symulator/symulator/SkrzyniaBiegow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/symulator/symulator/SkrzyniaBiegow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/DodajSamochodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/DodajSamochodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/java/org/example/samochodgui/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/dodaj-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/dodaj-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/src/main/resources/org/example/samochodgui/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/DodajSamochodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/DodajSamochodController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/dodaj-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/dodaj-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samochodGUI/target/classes/org/example/samochodgui/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Pozycja.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Pozycja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Samochod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/Silnik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" beforeDir="false" afterPath="$PROJECT_DIR$/symulator/src/symulator/SkrzyniaBiegow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +74,7 @@
     "Application.Unnamed.executor": "Run",
     "Application.Zoo.executor": "Run",
     "Application.main.executor": "Debug",
-    "Application.start gui.executor": "Debug",
+    "Application.start gui.executor": "Run",
     "Application.zadania.Zoo.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -217,7 +228,9 @@
       <workItem from="1765314178603" duration="190000" />
       <workItem from="1765789811430" duration="9601000" />
       <workItem from="1765806293914" duration="401000" />
-      <workItem from="1765813871232" duration="3949000" />
+      <workItem from="1765813871232" duration="5720000" />
+      <workItem from="1765820903754" duration="5342000" />
+      <workItem from="1765839721397" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="gui samochod">
       <option name="closed" value="true" />

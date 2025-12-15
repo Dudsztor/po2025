@@ -9,11 +9,16 @@ public class Pozycja {
         this.y = y;
     }
 
-    public double getX() { return x; }
-    public double getY() { return y; }
+    public double getX() {
+        return x;
+    }
+    public double getY() {
+        return y;
+    }
 
     @Override
     public String toString() {
-        return String.format("%.2f, %.2f", x, y);
+        return String.format("%.2f, %.2f", x, y)
+                ;
     }
 }

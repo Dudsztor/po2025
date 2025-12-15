@@ -15,6 +15,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import symulator.*;
 
+import org.example.samochodgui.DodajSamochodController.SilnikSpec;
+import org.example.samochodgui.DodajSamochodController.SkrzyniaSpec;
+import org.example.samochodgui.DodajSamochodController.SprzegloSpec;
+
 public class HelloController implements Listener {
 
     private Samochod aktywneAuto;
@@ -31,13 +35,12 @@ public class HelloController implements Listener {
     @FXML private TextField currentSpeedField;
     @FXML private TextField gearboxNameField;
     @FXML private TextField biegField;
+    @FXML private TextField skrzyniaCenaField;
     @FXML private TextField engineNameField;
     @FXML private TextField obrotyField;
-    @FXML private TextField clutchStateField;
-
     @FXML private TextField silnikCenaField;
+    @FXML private TextField clutchStateField;
     @FXML private TextField sprzegloCenaField;
-    @FXML private TextField skrzyniaCenaField;
 
     @FXML private AnchorPane mapPane;
 
@@ -66,7 +69,7 @@ public class HelloController implements Listener {
                 aktywneAuto.addListener(this);
                 refresh();
             } else {
-                modelTextField.setText("");
+                wyborAutaBox.getSelectionModel().clearSelection();
             }
         });
 
@@ -92,7 +95,7 @@ public class HelloController implements Listener {
         nrRejestracyjnyField.setText(aktywneAuto.getNrRejestracyjny());
         wagaTextField.setText(String.valueOf(aktywneAuto.getWaga()));
         predkoscField.setText(String.valueOf(aktywneAuto.getMaxPredkosc()));
-        currentSpeedField.setText(String.valueOf(aktywneAuto.getAktualnaPredkosc())); // Zakładam że getAktualnaPredkosc zwraca double
+        currentSpeedField.setText(String.valueOf(aktywneAuto.getAktualnaPredkosc()));
         //silnik
         engineNameField.setText(aktywneAuto.silnik.getNazwa());
         obrotyField.setText(String.valueOf(aktywneAuto.silnik.getObroty()));
@@ -116,17 +119,33 @@ public class HelloController implements Listener {
         wyborAutaBox.getSelectionModel().select(nowySamochod);
     }
 
-    public static void addCarToList(String model, String registration, double weight, int speed, String engineName, String gearboxName) {
+    public static void addCarToList(String model, String rejestracja, double weight, int speed,
+                                    SilnikSpec silnikSpec, SkrzyniaSpec skrzyniaSpec, SprzegloSpec sprzegloSpec) {
         if (instancja != null) {
-            Silnik nowySilnik = new Silnik(engineName, 150, 2000, 6000);
-            SkrzyniaBiegow nowaSkrzynia = new SkrzyniaBiegow(gearboxName, 50, 1500, 6);
-            Sprzeglo noweSprzeglo = new Sprzeglo("Standard", 20, 500);
+            Silnik nowySilnik = new Silnik(
+                    silnikSpec.nazwa,
+                    silnikSpec.waga,
+                    silnikSpec.cena,
+                    silnikSpec.maxObroty
+            );
 
-            Samochod auto = new Samochod(model, registration, weight, speed, nowySilnik, nowaSkrzynia, noweSprzeglo);
+            SkrzyniaBiegow nowaSkrzynia = new SkrzyniaBiegow(
+                    skrzyniaSpec.nazwa,
+                    skrzyniaSpec.waga,
+                    skrzyniaSpec.cena,
+                    skrzyniaSpec.iloscBiegow
+            );
+
+            Sprzeglo noweSprzeglo = new Sprzeglo(
+                    sprzegloSpec.nazwa,
+                    sprzegloSpec.waga,
+                    sprzegloSpec.cena
+            );
+
+            Samochod auto = new Samochod(model, rejestracja, weight, speed, nowySilnik, nowaSkrzynia, noweSprzeglo);
 
             instancja.dodajSamochod(auto);
-
-            System.out.println("Dodano auto: " + model);
+            System.out.println("Dodano auto");
         }
     }
 
@@ -158,7 +177,6 @@ public class HelloController implements Listener {
             stage.showAndWait();
         } catch (Exception e) {
             pokazBlad(e.getMessage());
-            e.printStackTrace();
         }
     }
 
@@ -174,20 +192,12 @@ public class HelloController implements Listener {
     }
     @FXML private void zwiekszBiegF() {
         if (aktywneAuto != null) {
-            try {
-                aktywneAuto.zwiekszBieg();
-            } catch (Exception e) {
-                pokazBlad(e.getMessage());
-            }
+            aktywneAuto.zwiekszBieg();
         }
     }
     @FXML private void zmniejszBiegF() {
         if (aktywneAuto != null) {
-            try {
-                aktywneAuto.zmniejszBieg();
-            } catch (Exception e) {
-                pokazBlad(e.getMessage());
-            }
+            aktywneAuto.zmniejszBieg();
         }
     }
     @FXML private void nacisnijSprzeglo() {
@@ -214,6 +224,7 @@ public class HelloController implements Listener {
             refresh();
         }
     }
+
     private void pokazBlad(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Błąd");

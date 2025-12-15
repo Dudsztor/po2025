@@ -33,5 +33,7 @@ public class Silnik extends Komponent {
             obroty -= 100;
         }
     }
-    public int getObroty() { return obroty; }
+    public int getObroty() {
+        return obroty;
+    }
 }
