@@ -1,5 +1,7 @@
 package symulator;
 
+import javafx.scene.control.Alert;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +41,7 @@ public class Samochod extends Thread {
         double deltat = 0.1;
         while (true) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
                 przeliczPredkosc();
                 if (cel != null && aktualnaPredkosc > 0) {
                     double odleglosc = Math.sqrt(Math.pow(cel.x - pozycja.x, 2) + Math.pow(cel.y - pozycja.y, 2));
@@ -105,19 +107,18 @@ public class Samochod extends Thread {
     public void wylacz() {
         silnik.zatrzymaj();
     }
-    public void zwiekszBieg() throws Exception {
+    public void zwiekszBieg() throws pokazBlad {
         if(sprzeglo.isWcisniete()) {
             skrzynia.zwiekszBieg();
-        }
-        else {
-            throw new Exception("Wciśnij sprzęgło!");
+        } else {
+            throw new pokazBlad("Sprzęgło nie jest wciśnięte!");
         }
     }
-    public void zmniejszBieg() throws Exception {
+    public void zmniejszBieg() throws pokazBlad {
         if(sprzeglo.isWcisniete()) {
             skrzynia.zmniejszBieg();
         } else {
-            throw new Exception("Wciśnij sprzęgło!");
+            throw new pokazBlad("Sprzęgło nie jest wciśnięte!");
         }
     }
 

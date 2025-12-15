@@ -19,7 +19,7 @@ public class HelloController implements Listener {
 
     private Samochod aktywneAuto;
     private ObservableList<Samochod> flota = FXCollections.observableArrayList();
-    private static HelloController instance;
+    private static HelloController instancja;
 
     @FXML private ComboBox<Samochod> wyborAutaBox;
     @FXML private ImageView carImageView;
@@ -42,7 +42,7 @@ public class HelloController implements Listener {
     @FXML private AnchorPane mapPane;
 
     public HelloController() {
-        instance = this;
+        instancja = this;
     }
 
     @FXML
@@ -117,14 +117,14 @@ public class HelloController implements Listener {
     }
 
     public static void addCarToList(String model, String registration, double weight, int speed, String engineName, String gearboxName) {
-        if (instance != null) {
+        if (instancja != null) {
             Silnik nowySilnik = new Silnik(engineName, 150, 2000, 6000);
             SkrzyniaBiegow nowaSkrzynia = new SkrzyniaBiegow(gearboxName, 50, 1500, 6);
             Sprzeglo noweSprzeglo = new Sprzeglo("Standard", 20, 500);
 
             Samochod auto = new Samochod(model, registration, weight, speed, nowySilnik, nowaSkrzynia, noweSprzeglo);
 
-            instance.dodajSamochod(auto);
+            instancja.dodajSamochod(auto);
 
             System.out.println("Dodano auto: " + model);
         }
@@ -163,10 +163,14 @@ public class HelloController implements Listener {
     }
 
     @FXML private void wlaczAutoF(){
-        if (aktywneAuto != null) aktywneAuto.wlacz();
+        if (aktywneAuto != null) {
+            aktywneAuto.wlacz();
+        }
     }
     @FXML private void wylaczAutoF(){
-        if (aktywneAuto != null) aktywneAuto.wylacz();
+        if (aktywneAuto != null) {
+            aktywneAuto.wylacz();
+        }
     }
     @FXML private void zwiekszBiegF() {
         if (aktywneAuto != null) {
