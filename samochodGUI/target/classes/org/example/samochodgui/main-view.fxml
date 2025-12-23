@@ -90,7 +90,7 @@
                                     </rowConstraints>
                                     <children>
                                         <Label text="Nazwa" />
-                                        <TextField fx:id="gearboxNameField" editable="false" text="Manual" GridPane.columnIndex="1" />
+                                        <TextField fx:id="gearboxNameField" editable="false" GridPane.columnIndex="1" />
 
                                         <Label text="Bieg" GridPane.rowIndex="1" />
                                         <TextField fx:id="biegField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -125,7 +125,7 @@
                                     </rowConstraints>
                                     <children>
                                         <Label text="Nazwa" />
-                                        <TextField fx:id="engineNameField" editable="false" text="V8" GridPane.columnIndex="1" />
+                                        <TextField fx:id="engineNameField" editable="false" GridPane.columnIndex="1" />
 
                                         <Label text="Obroty" GridPane.rowIndex="1" />
                                         <TextField fx:id="obrotyField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />

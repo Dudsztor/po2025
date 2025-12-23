@@ -15,15 +15,11 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import symulator.*;
 
-import org.example.samochodgui.DodajSamochodController.SilnikSpec;
-import org.example.samochodgui.DodajSamochodController.SkrzyniaSpec;
-import org.example.samochodgui.DodajSamochodController.SprzegloSpec;
-
 public class HelloController implements Listener {
 
     private Samochod aktywneAuto;
     private ObservableList<Samochod> flota = FXCollections.observableArrayList();
-    private static HelloController instancja;
+
 
     @FXML private ComboBox<Samochod> wyborAutaBox;
     @FXML private ImageView carImageView;
@@ -45,7 +41,6 @@ public class HelloController implements Listener {
     @FXML private AnchorPane mapPane;
 
     public HelloController() {
-        instancja = this;
     }
 
     @FXML
@@ -119,36 +114,6 @@ public class HelloController implements Listener {
         wyborAutaBox.getSelectionModel().select(nowySamochod);
     }
 
-    public static void addCarToList(String model, String rejestracja, double weight, int speed,
-                                    SilnikSpec silnikSpec, SkrzyniaSpec skrzyniaSpec, SprzegloSpec sprzegloSpec) {
-        if (instancja != null) {
-            Silnik nowySilnik = new Silnik(
-                    silnikSpec.nazwa,
-                    silnikSpec.waga,
-                    silnikSpec.cena,
-                    silnikSpec.maxObroty
-            );
-
-            SkrzyniaBiegow nowaSkrzynia = new SkrzyniaBiegow(
-                    skrzyniaSpec.nazwa,
-                    skrzyniaSpec.waga,
-                    skrzyniaSpec.cena,
-                    skrzyniaSpec.iloscBiegow
-            );
-
-            Sprzeglo noweSprzeglo = new Sprzeglo(
-                    sprzegloSpec.nazwa,
-                    sprzegloSpec.waga,
-                    sprzegloSpec.cena
-            );
-
-            Samochod auto = new Samochod(model, rejestracja, weight, speed, nowySilnik, nowaSkrzynia, noweSprzeglo);
-
-            instancja.dodajSamochod(auto);
-            System.out.println("Dodano auto");
-        }
-    }
-
     @FXML
     protected void usunAutoF() {
         if (aktywneAuto != null) {
@@ -170,6 +135,8 @@ public class HelloController implements Listener {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("dodaj-view.fxml"));
             GridPane dialogContent = loader.load();
+            DodajSamochodController childController = loader.getController();
+            childController.setMainController(this);
 
             Stage stage = new Stage();
             stage.setTitle("Nowy Samochód");
@@ -177,6 +144,7 @@ public class HelloController implements Listener {
             stage.showAndWait();
         } catch (Exception e) {
             pokazBlad(e.getMessage());
+            e.printStackTrace();
         }
     }
 

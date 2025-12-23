@@ -8,8 +8,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import symulator.Samochod;
+import symulator.Silnik;
+import symulator.SkrzyniaBiegow;
+import symulator.Sprzeglo;
 
 public class DodajSamochodController {
+
+    private HelloController mainController;
 
     @FXML private TextField modelTextField;
     @FXML private TextField registrationTextField;
@@ -23,12 +29,15 @@ public class DodajSamochodController {
     @FXML private Button confirmButton;
     @FXML private Button cancelButton;
 
+    public void setMainController(HelloController mainController) {
+        this.mainController = mainController;
+    }
+
     public static class SilnikSpec {
         String nazwa;
         double waga;
         double cena;
         int maxObroty;
-
         public SilnikSpec(String nazwa, double waga, double cena, int maxObroty) {
             this.nazwa = nazwa;
             this.waga = waga;
@@ -45,7 +54,6 @@ public class DodajSamochodController {
         double waga;
         double cena;
         int iloscBiegow;
-
         public SkrzyniaSpec(String nazwa, double waga, double cena, int iloscBiegow) {
             this.nazwa = nazwa;
             this.waga = waga;
@@ -61,7 +69,6 @@ public class DodajSamochodController {
         String nazwa;
         double waga;
         double cena;
-
         public SprzegloSpec(String nazwa, double waga, double cena) {
             this.nazwa = nazwa;
             this.waga = waga;
@@ -71,14 +78,14 @@ public class DodajSamochodController {
             return nazwa;
         }
     }
+
     @FXML
     public void initialize() {
         ObservableList<SilnikSpec> silniki = FXCollections.observableArrayList(
-                new SilnikSpec("Diesel 1.9 (wolny)", 200.0, 5000.0, 4000),
-                new SilnikSpec("V8 (umiarkowany)", 350.0, 20000.0, 6000),
-                new SilnikSpec("Benzyna 2.0 (szybki)", 160.0, 8000.0, 8000),
+                new SilnikSpec("Diezel (wolny)", 200.0, 5000.0, 4000),
+                new SilnikSpec("Benzyna (umiarkowany)", 350.0, 20000.0, 6000),
+                new SilnikSpec("Hybryda (szybki)", 160.0, 8000.0, 8000),
                 new SilnikSpec("Elektryczny (najszybszy)", 100.0, 15000.0, 10000)
-
         );
         engineComboBox.setItems(silniki);
         engineComboBox.getSelectionModel().selectFirst();
@@ -104,19 +111,42 @@ public class DodajSamochodController {
         String model = modelTextField.getText();
         String registration = registrationTextField.getText();
 
-        SilnikSpec selectedEngine = engineComboBox.getValue();
-        SkrzyniaSpec selectedGearbox = gearboxComboBox.getValue();
-        SprzegloSpec selectedClutch = clutchComboBox.getValue();
-
-        double weight;
-        int speed;
+        SilnikSpec silnikSpec = engineComboBox.getValue();
+        SkrzyniaSpec skrzyniaSpec = gearboxComboBox.getValue();
+        SprzegloSpec sprzegloSpec = clutchComboBox.getValue();
 
         try {
-            weight = Double.parseDouble(weightTextField.getText());
-            speed = Integer.parseInt(speedTextField.getText());
+            double weight = Double.parseDouble(weightTextField.getText());
+            int speed = Integer.parseInt(speedTextField.getText());
 
-            HelloController.addCarToList(model, registration, weight, speed,
-                    selectedEngine, selectedGearbox, selectedClutch);
+            Silnik nowySilnik = new Silnik(
+                    silnikSpec.nazwa,
+                    silnikSpec.waga,
+                    silnikSpec.cena,
+                    silnikSpec.maxObroty
+            );
+
+            SkrzyniaBiegow nowaSkrzynia = new SkrzyniaBiegow(
+                    skrzyniaSpec.nazwa,
+                    skrzyniaSpec.waga,
+                    skrzyniaSpec.cena,
+                    skrzyniaSpec.iloscBiegow
+            );
+
+            Sprzeglo noweSprzeglo = new Sprzeglo(
+                    sprzegloSpec.nazwa,
+                    sprzegloSpec.waga,
+                    sprzegloSpec.cena
+            );
+
+            Samochod noweAuto = new Samochod(model, registration, weight, speed, nowySilnik, nowaSkrzynia, noweSprzeglo);
+
+            if (mainController != null) {
+                mainController.dodajSamochod(noweAuto);
+                System.out.println("Dodano auto: " + model);
+            } else {
+                System.out.println("Błąd");
+            }
 
             Stage stage = (Stage) confirmButton.getScene().getWindow();
             stage.close();

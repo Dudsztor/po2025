@@ -45,7 +45,7 @@ public class Samochod extends Thread {
                 przeliczPredkosc();
                 if (cel != null && aktualnaPredkosc > 0) {
                     double odleglosc = Math.sqrt(Math.pow(cel.x - pozycja.x, 2) + Math.pow(cel.y - pozycja.y, 2));
-                    if (odleglosc > deltat*100) {
+                    if (odleglosc > deltat*50) {
                         double dx = aktualnaPredkosc * deltat * (cel.x - pozycja.x) / odleglosc;
                         double dy = aktualnaPredkosc * deltat * (cel.y - pozycja.y) / odleglosc;
                         pozycja.x += dx;
